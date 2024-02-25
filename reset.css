@@ -1,0 +1,208 @@
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Additional Resets */
+input,
+textarea,
+select {
+    font-family: inherit;
+    /* Use parent font */
+    font-size: inherit;
+    /* Use parent font size */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    /* Remove margins */
+    padding: 0;
+    /* Remove padding */
+    color: inherit;
+    /* Use parent color */
+    font: inherit;
+    /* Use parent font */
+    line-height: normal;
+    /* Reset line-height */
+}
+
+button,
+input {
+    overflow: visible;
+    /* Show overflow */
+}
+
+button,
+select {
+    text-transform: none;
+    /* Reset text-transform */
+}
+
+/* Set cursor for interactive elements */
+button,
+input,
+select,
+textarea {
+    cursor: pointer;
+}
+
+
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    font-family: poppins;
+}
+
+:root {
+    /* Font Sizes */
+    --font-xs: 0.75rem; /* 12px */
+    --font-sm: 0.875rem; /* 14px */
+    --font-md: 1rem; /* 16px */
+    --font-lg: 1.125rem; /* 18px */
+    --font-xl: 1.25rem; /* 20px */
+    --font-head: 3rem;
+    
+    /* Gap Values */
+    --gap-xs: 0.25rem; /* 4px */
+    --gap-sm: 0.5rem; /* 8px */
+    --gap-md: 1rem; /* 16px */
+    --gap-lg: 1.5rem; /* 24px */
+    --gap-xl: 2rem; /* 32px */
+  }
+  

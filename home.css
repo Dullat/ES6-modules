@@ -1,0 +1,98 @@
+h1 {
+    font-size: var(--font-head);
+    font-weight: 700;
+    margin-top: 15vh;
+}
+
+.subhead {
+    font-size: var(--font-lg);
+    margin-top: 2rem;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    margin-top: 4rem;
+    width: 80vw;
+    max-width: 50rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "player-1 player-2"
+    "color color"
+    "mode mode"
+    "submit submit";
+    gap: 2rem;
+    /* background-color: beige; */
+}
+
+.player-div-1 {
+    grid-area: player-1;
+    display: grid;
+}
+
+.player-div-2 {
+    grid-area: player-2;
+}
+
+[class*="player-div"] {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.color {
+    grid-area: color;
+    display: flex;
+    flex-direction: column;
+}
+
+.mode {
+    display: flex;
+    flex-direction: column;
+    grid-area: mode;
+}
+
+.color > p,
+.mode > p {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.color > div,
+.mode > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.color > div > div,
+.mode > div > div {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.color > div > div {
+    gap: .2;
+}
+
+button {
+    grid-area: submit;
+    min-width: 7rem;
+    padding: .2rem;
+    margin: auto;
+}
+
+[class*="player"] input {
+    border: none;
+    background-color: aqua;
+    width: 100%;
+    padding: .2rem;
+    padding-inline: .5rem;
+    cursor: auto;
+}
