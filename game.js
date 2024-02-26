@@ -1,4 +1,5 @@
-import createBoard from "./appUi.js";
+import exportedValues from "./prepareGameEnv.js";
+import {makeEnv, createBoard, shouWiningPlayer} from "./appUi.js";
 import { switchUser } from "./playerSystem.js";
 
 let player1Wins = 0;

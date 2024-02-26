@@ -1,6 +1,8 @@
+function makeEnv({player1Name, player1Color, player2Name, player2Color, mode}) {
+    
+}
 
-
-export default function createBoard() {
+function createBoard() {
     let boxArray = [
         "", "", "",
         "", "", "",
@@ -14,7 +16,7 @@ export default function createBoard() {
     });
 };
 
-export function shouWiningPlayer(player1Wins, player2Wins) {
+function shouWiningPlayer(player1Wins, player2Wins) {
     let winBoard = document.querySelector('.wining-player');
     if (player1Wins === player2Wins) {
         winBoard.textContent = `EQUALS`;
@@ -22,3 +24,5 @@ export function shouWiningPlayer(player1Wins, player2Wins) {
         winBoard.textContent = `EQUALS`;
     }
 }
+
+export {makeEnv, createBoard, shouWiningPlayer};
