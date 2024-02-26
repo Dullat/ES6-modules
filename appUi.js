@@ -36,6 +36,31 @@ function showWiningPlayer(player1Wins, player2Wins) {
     } else winBoard.textContent = document.querySelector('.player-2-name').textContent;
 }
 
+function hexToRgb(hex) {
+  hex = hex.replace('#', '');
+  let bigint = parseInt(hex, 16);
+
+  let r = (bigint >> 16) & 255;
+  let g = (bigint >> 8) & 255;
+  let b = bigint & 255;
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+
+function freezBoard(lostColor) {
+  // alert(lostColor);
+  let elements = document.querySelectorAll('.box');
+  elements.forEach(element => {
+    element.style.pointerEvents = 'none';
+    let computedStyle = window.getComputedStyle(element);
+    if (computedStyle.getPropertyValue('background') === hexToRgb(lostColor)) {
+      element.style.opacity = '0.5';
+    }
+  });
+}
+
+
 function resetBoard() {
     let board = document.querySelector('.gameboard');
     while(board.firstChild){
@@ -45,4 +70,4 @@ function resetBoard() {
 
 }
 
-export { makeEnv, createBoard, updateWins, showWiningPlayer, resetBoard };
+export { makeEnv, createBoard, updateWins, showWiningPlayer, resetBoard, freezBoard };

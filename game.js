@@ -1,6 +1,6 @@
 import { player1Name, player2Name, player1Color, player2Color, mode } from "./getCookie.js";
-import { makeEnv, createBoard, updateWins, showWiningPlayer, resetBoard} from "./appUi.js";
-import { switchUser, clearPlayerArray } from "./playerSystem.js";
+import { makeEnv, createBoard, updateWins, showWiningPlayer, resetBoard, freezBoard} from "./appUi.js";
+import { switchUser, clearPlayerArray, getLostPlayerColor } from "./playerSystem.js";
 
 let player1Wins = 0;
 let player2Wins = 0;
@@ -17,6 +17,7 @@ const winningCombos = [
 ];
 
 function reset() {
+  freezBoard(getLostPlayerColor());
     document.querySelector('.reset-icon').addEventListener('click', () => {
       clearPlayerArray();
     resetBoard();
@@ -37,7 +38,6 @@ function checkWinner({ player, lastPlayer }) {
             updateWins(player1Wins, player2Wins);
 
             showWiningPlayer(player1Wins, player2Wins);
-
             reset();
         }
     })
