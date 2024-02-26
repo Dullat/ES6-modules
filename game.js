@@ -16,6 +16,8 @@ const winningCombos = [
     [2, 4, 6]
 ];
 
+// setMode(document.body);
+
 function reset() {
   freezBoard(getLostPlayerColor());
     document.querySelector('.reset-icon').addEventListener('click', () => {

@@ -85,13 +85,16 @@ form {
 button {
     grid-area: submit;
     min-width: 7rem;
-    padding: .2rem;
+    padding: .3rem;
     margin: auto;
+    background: gray;
+    border: none;
+    border-radius: .5rem;
 }
 
 [class*="player"] input {
     border: none;
-    background-color: aqua;
+    background-color: gray;
     width: 100%;
     padding: .2rem;
     padding-inline: .5rem;

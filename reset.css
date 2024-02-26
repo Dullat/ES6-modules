@@ -206,3 +206,8 @@ html {
     --gap-xl: 2rem; /* 32px */
   }
   
+  
+  body[dark]{
+    background: #222222;
+    color: #F8F8F8;
+  }

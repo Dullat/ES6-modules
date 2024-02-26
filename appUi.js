@@ -7,6 +7,12 @@ function makeEnv({ player1Name, player2Name, player1Color, player2Color, mode })
     let p2 = document.querySelector('.player-2-name');
     p2.textContent = player2Name;
     p2.style.color = player2Color;
+    
+    if(mode === 'dark'){
+    document.body.setAttribute('dark', '');
+  }else {
+    document.body.removeAttribute('dark');
+  }
 }
 
 function createBoard() {
