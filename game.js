@@ -39,7 +39,7 @@ function checkWinner({ player, lastPlayer }) {
 
             updateWins(player1Wins, player2Wins);
 
-            showWiningPlayer(player1Wins, player2Wins);
+            showWiningPlayer(lastPlayer);
             reset();
         }
     })
