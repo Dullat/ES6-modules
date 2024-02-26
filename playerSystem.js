@@ -1,5 +1,5 @@
-const player1 = [];
-const player2 = [];
+let player1 = [];
+let player2 = [];
 let currentPlayer = 'player-1';
 
 function addToPlayerCombo(e, index){
@@ -11,7 +11,7 @@ function addToPlayerCombo(e, index){
     console.log(player1, player2);
 }
 
-export function switchUser(e, index){
+function switchUser(e, index){
     if(currentPlayer === 'player-1'){
         addToPlayerCombo(1,index);
         let lastPlayer = currentPlayer;
@@ -26,3 +26,11 @@ export function switchUser(e, index){
         return {player: player2, lastPlayer};
     }
 };
+
+function clearPlayerArray() {
+    player1 = [];
+    player2 = [];
+    currentPlayer = 'player-1';
+};
+
+export {switchUser, clearPlayerArray};

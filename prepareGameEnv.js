@@ -1,25 +1,24 @@
+let form = document.querySelector('form');
 let player1Name = '';
 let player1Color = '';
 let player2Name = '';
 let player2Color = '';
 let mode = '';
 
-export default function exportedValues() {
-    return { player1Name, player1Color, player2Name, player2Color, mode };
-}
+document.querySelector('form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const player1Name = document.querySelector('#player-1').value;
+    const player2Name = document.querySelector('#player-2').value;
+    const player1Color = document.querySelector('#player-color-1').value;
+    const player2Color = document.querySelector('#player-color-2').value;
+    const mode = document.querySelector('[type="radio"]:checked').value;
 
-document.addEventListener('DOMContentLoaded', () => {
-    let form = document.querySelector('form');
+    document.cookie = `player1Name=${player1Name}`;
+    document.cookie = `player2Name=${player2Name}`;
+    document.cookie = `player1Color=${player1Color}`;
+    document.cookie = `player2Color=${player2Color}`;
+    document.cookie = `mode=${mode}`;
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        player1Name = document.querySelector('#player-1').value;
-        player2Name = document.querySelector('#player-2').value;
-        player1Color = document.querySelector('#player-color-1').value;
-        player2Color = document.querySelector('#player-color-2').value;
-        mode = document.querySelector('[type="radio"]:checked').value;
-        console.log(mode);
-        exportValues();
-    });
+    window.location.href = 'game.html';
 });
 

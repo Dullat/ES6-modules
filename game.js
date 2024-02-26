@@ -1,6 +1,6 @@
-import exportedValues from "./prepareGameEnv.js";
-import {makeEnv, createBoard, shouWiningPlayer} from "./appUi.js";
-import { switchUser } from "./playerSystem.js";
+import { player1Name, player2Name, player1Color, player2Color, mode } from "./getCookie.js";
+import { makeEnv, createBoard, updateWins, showWiningPlayer, resetBoard} from "./appUi.js";
+import { switchUser, clearPlayerArray } from "./playerSystem.js";
 
 let player1Wins = 0;
 let player2Wins = 0;
@@ -16,17 +16,27 @@ const winningCombos = [
     [2, 4, 6]
 ];
 
+function reset() {
+    clearPlayerArray();
+    resetBoard();
+    clickBox();
+}
+
 function checkWinner({ player, lastPlayer }) {
 
     winningCombos.forEach(combo => {
         let [a, b, c] = combo;
-        if(player.includes(a) && player.includes(b) && player.includes(c)){
+        if (player.includes(a) && player.includes(b) && player.includes(c)) {
             if (lastPlayer === 'player-1') {
                 console.log("p1 won");
                 player1Wins++;
-            }else player2Wins++;
+            } else player2Wins++;
 
-            shouWiningPlayer(player1Wins, player2Wins);
+            updateWins(player1Wins, player2Wins);
+
+            showWiningPlayer(player1Wins, player2Wins);
+
+            reset();
         }
     })
 }
@@ -46,4 +56,5 @@ function clickBox() {
 }
 
 createBoard();
-clickBox()
+clickBox();
+makeEnv({ player1Name, player2Name, player1Color, player2Color, mode });
