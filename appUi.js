@@ -1,4 +1,4 @@
-function createBoard() {
+export default function createBoard() {
     let boxArray = [
         "","","",
         "","","",
@@ -10,6 +10,4 @@ function createBoard() {
         box.classList.add('box');
         document.querySelector('.gameboard').appendChild(box);
     });
-}
-
-createBoard();
+};
