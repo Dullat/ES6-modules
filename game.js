@@ -17,9 +17,11 @@ const winningCombos = [
 ];
 
 function reset() {
-    clearPlayerArray();
+    document.querySelector('.reset-icon').addEventListener('click', () => {
+      clearPlayerArray();
     resetBoard();
     clickBox();
+    })
 }
 
 function checkWinner({ player, lastPlayer }) {
@@ -49,7 +51,7 @@ function clickBox() {
                 e.style.background = "red";
                 e.setAttribute('clicked', '');
 
-                checkWinner(switchUser(e, index));
+                checkWinner(switchUser(e, index, player1Color, player2Color));
             }
         });
     });

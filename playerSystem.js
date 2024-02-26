@@ -11,14 +11,16 @@ function addToPlayerCombo(e, index){
     console.log(player1, player2);
 }
 
-function switchUser(e, index){
+function switchUser(e, index, player1color, player2color){
     if(currentPlayer === 'player-1'){
+        e.style.background = player1color;
         addToPlayerCombo(1,index);
         let lastPlayer = currentPlayer;
         console.log(lastPlayer);
         currentPlayer = 'player-2';
         return {player: player1, lastPlayer};
     }else {
+        e.style.background = player2color;
         addToPlayerCombo(2,index);
         let lastPlayer = currentPlayer;
         console.log(lastPlayer);

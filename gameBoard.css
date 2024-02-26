@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+.wining-player {
+  margin: 4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .gameboard {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -11,7 +17,30 @@
 }
 
 .box {
-    width: 2rem;
+    width: 4.5rem;
     aspect-ratio: 1;
     background-color: aliceblue;
+}
+
+.match-status {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  max-width: 40rem;
+  margin-top: 3rem;
+}
+
+.match-status div {
+  font-size: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.reset-icon {
+  width: 2.5rem;
+  aspect-ratio: 1;
 }
