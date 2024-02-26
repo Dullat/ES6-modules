@@ -64,6 +64,7 @@ function freezBoard(lostColor) {
       element.style.opacity = '0.5';
     }
   });
+  document.querySelector('.gameboard').style.opacity = '.7';
 }
 
 
